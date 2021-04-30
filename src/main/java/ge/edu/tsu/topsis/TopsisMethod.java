@@ -16,10 +16,25 @@ public class TopsisMethod {
     private Alternative[][] decisionMatrix;
 
     public void selectBestSupplier() {
-        System.out.println("Decision Matrix:");
+        System.out.println("ფაზი გადაწყვეტილების მატრიცა:\n");
         Printer.printMatrix(decisionMatrix);
+        System.out.println();
 
         Alternative[][] normalizedFuzzyMatrix = calculateNormalizedFuzzyMatrix();
+
+        if (normalizedFuzzyMatrix == null) {
+            return;
+        }
+
+        System.out.println("ფაზი ნორმალიზებული მატრიცა:\n");
+        Printer.printMatrix(normalizedFuzzyMatrix);
+        System.out.println();
+
+        Alternative[][] weightedNormalizedFuzzyMatrix = calculateWeightedNormalizedFuzzyMatrix();
+
+        System.out.println("ფაზი შეწონილი ნორმალიზებული მატრიცა:\n");
+        Printer.printMatrix(weightedNormalizedFuzzyMatrix);
+        System.out.println();
     }
 
     private Fuzzy getMaxWeight(int indexJ) {
