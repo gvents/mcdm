@@ -1,6 +1,5 @@
 package ge.edu.tsu.objects;
 
-import ge.edu.tsu.CriteriaType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

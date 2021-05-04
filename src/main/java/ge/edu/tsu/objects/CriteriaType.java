@@ -1,4 +1,4 @@
-package ge.edu.tsu;
+package ge.edu.tsu.objects;
 
 public enum CriteriaType {
     BENEFIT, COST

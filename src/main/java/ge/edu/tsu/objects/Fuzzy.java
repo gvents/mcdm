@@ -22,4 +22,13 @@ public class Fuzzy {
         this.middle = middle.setScale(3, RoundingMode.HALF_UP);
         this.right = right.setScale(3, RoundingMode.HALF_UP);
     }
+
+    @Override
+    public String toString() {
+        return "(" +
+                left +
+                ", " + middle +
+                ", " + right +
+                ')';
+    }
 }
